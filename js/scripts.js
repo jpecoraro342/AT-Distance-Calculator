@@ -118,6 +118,8 @@ function UpdateInformation() {
 	li.appendChild(document.createElement("br"));
 	li.appendChild(document.createTextNode("Amenities: " + amenities));
 	ul.appendChild(li);
+
+	updateChart(start_index, end_index);
 }
 
 function getElevationUp(start_index, end_index) {
@@ -142,6 +144,91 @@ function getElevationDown(start_index, end_index) {
 	}
 
 	return elevation;
+}
+
+function updateChart(start_index, end_index){
+	var dataArray = [];
+	var names = [];
+
+	var startLoc  = locations[start_index];
+	var startDist = startLoc.springdist;
+
+	for (var i = start_index; i <= end_index; i++) {
+		var loc = locations[i];
+		var xvalue = loc.springdist - startDist;
+		var yvalue = loc.elevation;
+		var nameValue = loc.name;
+		dataArray[i - start_index] = [xvalue, yvalue];
+		names[i - start_index] = loc.name;
+	}
+
+	$(function () {
+    $('#chart-container').highcharts({
+        chart: {
+            type: 'spline',
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'Elevation Profile'
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: 'Distance (mi)'
+            },
+            startOnTick: true,
+            endOnTick: true,
+            showLastLabel: true
+        },
+        yAxis: {
+            title: {
+                text: 'Elevation (ft)'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 100,
+            y: 70,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+            borderWidth: 1
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        marker: {
+                            enabled: false
+                        }
+                    }
+                }
+            }
+        },
+        tooltip: {
+	        //headerFormat: '<b>{series.name}</b><br>',
+	        //pointFormat: '{point.y} ft'
+	        formatter: function () {
+	    		return '<b>' + names[this.series.data.indexOf( this.point )] + '</b>'+ '<br/>' + this.y + ' ft';
+			}
+		},
+        series: [{
+            name: 'Elevation',
+            color: 'rgba(119, 152, 191, .5)',
+            data: dataArray
+        }]
+    });
+});
 }
 
 
