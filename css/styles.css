@@ -1,0 +1,144 @@
+nav ul li a.selected {
+  text-decoration: none;
+  background-color: #006687;
+}
+
+body {
+        padding-top: 50px; 
+ }
+
+.chat-client-border {
+	height: 100%;
+	border: 1px solid;
+	border-color: gray;
+}
+
+.data-border {
+	height: 50%;
+	border: 1px solid;
+	border-color: gray;
+}
+
+.data-box {
+	height: 16vh;
+}
+
+.top-buffer { margin-top:20px; }
+
+.chat-client {
+	height: 55vh;
+	min-height: 200px;
+}
+
+.list-container {
+	overflow-y: scroll;
+	padding-top:10px;
+}
+
+.temp-show {
+	background-color: orange;
+}
+
+textarea {
+	resize: none;
+
+	border:none;
+
+	padding-left:5px;
+	padding-right:5px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.fill-parent {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.border {
+	border: 1px solid;
+	border-color: gray;
+}
+
+.border-no-top {
+	border: 1px solid;
+	border-top: 0px;
+	border-color: gray;
+}
+
+.grayback {
+	background-color: #DCDCDC;
+}
+
+.btn {
+	
+}
+
+.margin-all {
+	margin: 10px;
+}
+
+.button-margin {
+	margin:10px;
+	margin-left:15px;
+}
+
+.center-block {
+	float: none;
+}
+
+ul {
+	padding: 0px;
+}
+
+.message {
+	padding: 8px 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	list-style-type: none;
+}
+
+.noliststyle {
+	list-style-type: none;
+}
+
+.location {
+	padding: 8px 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	list-style-type: none;
+	border: 1px solid;
+	border-color: #CCCCCC;
+
+	cursor: default;
+}
+
+.location:hover {
+	background-color: #CCCCCC;
+}
+
+.selected_loc {
+	background-color: #CCCCCC;
+}
+
+/*left chat is currently unused, however the appropriate styles to be used for a chat on the left side are col-xs-10 */
+.left-chat {
+	
+}
+/*right chat is currently unused, however the appropriate styles to be used for a chat on the right side are col-xs-10 col-xs-offset-2*/
+.right-chat {
+	background-color: #AEE3F5;
+}
+
+.name-text {
+	font-weight: 500;
+}
+
+.translate-text {
+	font-weight: 600;
+	font-style: italic;
+}
