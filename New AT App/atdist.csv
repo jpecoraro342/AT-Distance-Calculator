@@ -1,0 +1,43 @@
+name,springdist,distprev,elevation,elevationdiff,steep,amenities
+Woody Gap,21.1,0,3173,,,
+Big Cedar Mountain,22.1,1,3737,564, 5.64 ,
+Jarrad Gap,26.7,4.6,3250,-487, 1.06 ,
+Bird Gap,28.1,1.4,3650,400, 2.86 ,
+Blood Mount.,29.3,1.2,4461,811, 6.76 ,
+Neel Gap,31.7,2.4,3125,-1336, 5.57 ,
+Levelland Mountain,33.2,1.5,3942,817, 5.45 ,
+Cowrock Mountain,36.7,3.5,3842,-100, 0.29 ,
+Tesnatee Gap,37.7,1,3138,-704, 7.04 ,
+Hogpen,38.6,0.9,3450,312, 3.47 ,
+Low Gap,43.2,4.6,3050,-400, 0.87 ,
+Chatahoochee Gap,48.2,5,3500,450, 0.90 ,
+Blue Mountain,51.4,3.2,4025,525, 1.64 ,
+Unicoi Gap,52.9,1.5,2949,-1076, 7.17 ,
+Rocky Mountain,54.3,1.4,4017,1068, 7.63 ,Campsite
+Indian Grave Gap,55.6,1.3,3113,-904, 6.95 ,
+Tray Mountain,58.1,2.5,4430,1317, 5.27 ,
+Tray Mountain Shelt.,58.6,0.5,4337.704918,-92.29508197, 1.85 ,
+Addis Gap,64.2,5.6,3304,-1033.704918, 1.85 ,Campsite (.5m)
+Kelly Knob,65.2,1,4276,972, 9.72 ,
+Deep Gap,66,0.8,3550,-726, 9.08 ,Shelter (.2m)
+McClure Gap,67.2,1.2,3807.142857,257.1428571, 2.14 ,Campsite
+Powell Mountain,67.4,0.2,3850,42.85714286, 2.14 ,
+Dicks Creek Gap,69.6,2.2,2675,-1175, 5.34 ,
+Campsite,70.7,1.1,2966.666667,291.6666667, 2.65 ,Campsite
+Bull Gap,72.9,2.2,3550,583.3333333, 2.65 ,
+Plumorchard Shelter,74.1,1.2,3295.6,-254.4, 2.12 ,Shelter (.2m)
+Blue Ridge Gap,75.4,1.3,3020,-275.6, 2.12 ,
+Campsite 2,76.4,1,3276.25,256.25, 2.56 ,Campsite
+Bly Gap,78.6,2.2,3840,563.75, 2.56 ,Campsite
+Muskrat Creek Shelter,81.4,2.8,4600,760, 2.71 ,Shelter
+Deep Gap 2,85.4,4,4341,-259, 0.65 ,
+Standing Indian Shelter,86.3,0.9,4774.875,433.875, 4.82 ,Shelter
+Stand Ind. Mount.,87.8,1.5,5498,723.125, 4.82 ,
+Beech Gap,90.7,2.9,4460,-1038, 3.58 ,Campsite
+Carter Gap Shelter,93.9,3.2,4385.797101,-74.20289855, 0.23 ,Shelter
+Betty Creek Gap,97.6,3.7,4300,-85.79710145, 0.23 ,Campsite
+Albert Mountain,100.1,2.5,5250,950, 3.80 ,
+Long Branch Shelter,102.5,2.4,4700.181818,-549.8181818, 2.29 ,Shelter
+Rock Gap Shelter,106,3.5,3898.363636,-801.8181818, 2.29 ,Shelter
+Wallace Gap,106.7,0.7,3738,-160.3636364, 2.29 ,
+Winding Stair Gap,109.8,3.1,3850,112, 12.06 ,

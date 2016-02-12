@@ -1,7 +1,7 @@
 
 $(function(){
 	$.ajax({
-            url: "./atdist.csv",
+            url: "./atdistfull.csv",
             async: false,
             success: function (data) {
                 parseCSV(data);
@@ -39,7 +39,6 @@ function Location(locationDict) {
 	this.distprev = locationDict.distprev;
 	this.elevation = locationDict.elevation;
 	this.elevationdiff = locationDict.elevationdiff;
-	this.steep = locationDict.steep;
 	this.amenities = locationDict.amenities;
 
 	this.isSelected = ko.observable(false);

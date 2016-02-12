@@ -36,7 +36,7 @@
             <div class="col-xs-6 col-md-3 col-md-offset-2 chat-client-border">
                 <div class="fill-parent list-container container" id="chat-frame">
                     <ul id="startLocationList" data-bind="foreach: startLocations">
-                        <li class="location col-xs-12" data-bind="click: $parent.setStartSelected.bind($parent, $data, $index()), css: { 'selected_loc': isSelected }"><span data-bind="text: name"></span> - <span data-bind="text: distprev"></span> mi</li>
+                        <li class="location col-xs-12" data-bind="click: $parent.setStartSelected.bind($parent, $data, $index()), css: { 'selected_loc': isSelected }"><span data-bind="text: name"></span> - <span data-bind="text: springdist"></span> mi</li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="col-xs-6 col-md-3 col-md-offset-2 chat-client-border">
                 <div class="fill-parent list-container container" id="chat-frame">
                     <ul id="endLocationList" data-bind="foreach: endLocations">
-                        <li class="location col-xs-12" data-bind="click: $parent.setEndSelected.bind($parent, $data, $index()), css: { 'selected_loc': isSelected }"><span data-bind="text: name"></span> - <span data-bind="text: distprev"></span> mi</li>
+                        <li class="location col-xs-12" data-bind="click: $parent.setEndSelected.bind($parent, $data, $index()), css: { 'selected_loc': isSelected }"><span data-bind="text: name"></span> - <span data-bind="text: springdist"></span> mi</li>
                     </ul>
             </div>
         </div>
@@ -57,9 +57,9 @@
                         <li class = "noliststyle">Distance: <span data-bind="text: distance"></span> mi</li>
                         <li class = "noliststyle">Elevation Gain: <span data-bind="text: elevationGain"></span> ft</li>
                         <li class = "noliststyle">Elevation Loss: <span data-bind="text: elevationLoss"></span> ft</li>
-                        <li class = "noliststyle">Start Elevation: <span data-bind="text: startElevation"></span>    End Elevation:  <span data-bind="text: endElevation"></span></li>
+                        <li class = "noliststyle">Start Elevation: <span data-bind="text: startElevation"></span></li>    
+                        <li class = "noliststyle">End Elevation:  <span data-bind="text: endElevation"></span></li>
                         <li class = "noliststyle">Amenities: <span data-bind="text: amenities"></span></li>
-
                     </ul>
                 </div>
             </div>
