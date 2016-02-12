@@ -40,6 +40,7 @@ function Location(locationDict) {
 	this.elevation = locationDict.elevation;
 	this.elevationdiff = locationDict.elevationdiff;
 	this.amenities = locationDict.amenities;
+	this.links = locationDict.links;
 
 	this.isSelected = ko.observable(false);
 }
@@ -65,6 +66,7 @@ function ATViewModel(startLocations, endLocations) {
 	this.endElevation = ko.computed(function() { return this.selectedEndLocation().elevation }, this);
 
 	this.amenities = ko.computed(function() { return this.selectedEndLocation().amenities }, this);
+	this.links = ko.computed(function() { return this.selectedEndLocation().links }, this);
 
 	this.distance = ko.computed(function() {
 		var tempDistance = this.selectedEndLocation().springdist - this.selectedStartLocation().springdist;
