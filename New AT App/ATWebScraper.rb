@@ -71,7 +71,13 @@ module ATParser
 			@temp_shelters.each do |shelter|
 				the_shelter = Shelter.new # Shelter.new(shelter.at(1).text, shelter.at(1).css('a').text, shelter.at(0).text, shelter.at(2).text, shelter.at(3).text)
 				the_shelter.name = shelter.at(1).text
-				the_shelter.link = shelter.at(1).css('a').text
+
+				begin 
+					the_shelter.link = shelter.at(1).css('a').attr('href') 
+				rescue 
+
+				end
+
 				the_shelter.springdist = BigDecimal(shelter.at(0).text.tr(' ', ''))
 				the_shelter.elevation = BigDecimal(shelter.at(2).text.tr('\’', '').tr(' ', ''))
 				the_shelter.amenities = shelter.at(3).text
@@ -101,7 +107,13 @@ module ATParser
 		previous_shelter = shelters.at(0)
 
 		shelters.each do |shelter|
-			csv << ["#{shelter.name}", "#{shelter.springdist}", "#{shelter.springdist - previous_shelter.springdist}", "#{shelter.elevation}", "#{shelter.elevation - previous_shelter.elevation}", "#{shelter.amenities}"]
+			amenities = shelter.amenities
+
+			if !shelter.link.nil? && shelter.link != "" 
+				amenities = "#{amenities}, More Info: #{shelter.link}"
+			end
+
+			csv << ["#{shelter.name}", "#{shelter.springdist}", "#{shelter.springdist - previous_shelter.springdist}", "#{shelter.elevation}", "#{shelter.elevation - previous_shelter.elevation}", "#{amenities}"]
 			previous_shelter = shelter
 		end
 	end
